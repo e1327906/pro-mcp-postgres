@@ -6,10 +6,14 @@ import sys
 import logging
 import os
 import argparse
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger('postgres-mcp-server')
