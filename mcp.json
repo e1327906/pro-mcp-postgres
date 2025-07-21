@@ -1,0 +1,16 @@
+{
+  "mcpServers": 
+  {
+    "postgres-sse": {
+			"type": "sse",
+			"url": "http://localhost:8000/sse"
+		},
+    "postgres": {
+			"command": "python",
+			"args": [
+				"D:/Projects/AI/pro-mcp-postgres/postgres_server.py"
+			],
+			"type": "stdio"
+		}
+  }
+}

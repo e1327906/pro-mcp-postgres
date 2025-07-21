@@ -66,10 +66,28 @@ All database operation tools now accept an optional `database` parameter:
 
 ## Quick Start
 
+### Protocol Support
+The server supports **stdio** transport with protocol preferences:
+
+**STDIO Mode (Default - for MCP clients like Claude Desktop):**
+```bash
+# Default mode (stdio)
+python postgres_server.py
+
+# Explicit stdio mode
+python postgres_server.py --protocol stdio
+
 ## Quick Start
 
+**SSE Protocol:**
 ```bash
-# Single database (original format still supported)
+# SSE protocol - runs actual SSE server
+python postgres_server.py --protocol sse --host localhost --port 8000
+```
+
+**STDIO Protocol (Default):**
+```bash
+# STDIO protocol (default)
 python postgres_server.py
 
 # Multi-database setup with .env file (recommended)
